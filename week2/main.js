@@ -14,10 +14,10 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 
 document.body.appendChild(renderer.domElement);
 
-const geometry= new THREE.BoxGeometry(1,1,1);
-const material = new THREE. MeshStandardMaterial({color:0xFF0000});
-const cubeMesh= new THREE.Mesh(geometry, material);
-// scene.add(cubeMesh);
+// const geometry= new THREE.BoxGeometry(1,1,1);
+// const material = new THREE. MeshStandardMaterial({color:0xFF0000});
+// const cubeMesh= new THREE.Mesh(geometry, material);
+//scene.add(cubeMesh);
 
 const light= new THREE.DirectionalLight(0xffffff,1);
 light.position.set(2,2,5);
@@ -47,18 +47,18 @@ scene.add(axesHelper);
 // cubeMesh.rotation.x=Math.PI*0.25
 // cubeMesh.rotation.y=Math.PI*0.25
 
-cubeMesh.position.x=2;
-cubeMesh.rotation.x=Math.PI*0.2;
-cubeMesh.scale.z=2;
+// cubeMesh.position.x=2;
+// cubeMesh.rotation.x=Math.PI*0.2;
+// cubeMesh.scale.z=2;
 
-const geometry1= new THREE.BoxGeometry(1,1,1);
-const material1 = new THREE. MeshStandardMaterial({color:0x0000ff});
-const cubeMesh1= new THREE.Mesh(geometry1, material1);
+// const geometry1= new THREE.BoxGeometry(1,1,1);
+// const material1 = new THREE. MeshStandardMaterial({color:0x0000ff});
+// const cubeMesh1= new THREE.Mesh(geometry1, material1);
 // scene.add(cubeMesh1);
 
-cubeMesh1.position.x=0.5;
-cubeMesh1.rotation.x=Math.PI*-0.2;
-cubeMesh1.scale.z=-2;
+// cubeMesh1.position.x=0.5;
+// cubeMesh1.rotation.x=Math.PI*-0.2;
+// cubeMesh1.scale.z=-2;
 
 //Scene Graph
 const group= new THREE.Group();

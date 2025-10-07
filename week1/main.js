@@ -26,7 +26,7 @@ scene.add(light);
 
 function animate(){
     requestAnimationFrame(animate);
-    group.rotation.x  +=0.01;
+    cubeMesh.rotation.x  +=0.01;
     renderer.render(scene,camera);
 }
 
