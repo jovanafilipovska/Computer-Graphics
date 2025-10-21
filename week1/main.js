@@ -3,9 +3,15 @@ import * as THREE from 'three';
 const scene = new THREE.Scene();// scene constructor
 scene.background = new THREE.Color(0x202020);
 
-const camera = new THREE.PerspectiveCamera(
-    75, window.innerWidth/window.innerHeight, 0.1, 1000
-);
+const aspectRatio= window.innerWidth/window.innerHeight
+const camera=new THREE.OrthographicCamera(
+    -1*aspectRatio, //left
+    1*aspectRatio, //right
+    1, //top
+    -1, //bottom
+    0.1, //near clipping plane
+    100 //far clipping plane
+)
 
 camera.position.z=3;
 
@@ -15,7 +21,7 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
 const geometry= new THREE.BoxGeometry(1,1,1);
-const material = new THREE. MeshStandardMaterial({color:0xFF0000});
+const material = new THREE. MeshStandardMaterial({color:0xFF00000});
 const cubeMesh= new THREE.Mesh(geometry, material);
 scene.add(cubeMesh);
 
